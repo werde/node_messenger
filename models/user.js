@@ -33,7 +33,8 @@ userSchema.methods.encPwd = function(pwd) {
 userSchema.virtual('pwd').set( function(pwd){
 	this._plainPwd = pwd;
 	this.salt = Math.random() + '';
-	this.hashedPwd = encPwd(pwd);
+	this.key = "FFFFFFFFFFFFFF";
+	this.hashedPwd = this.encPwd(pwd);
 }).get(function(){
 	return this._plainPwd;
 })
