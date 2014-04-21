@@ -39,15 +39,3 @@ function createUsers(callback) {
 		console.log(user);
 	}, callback);
 }
-/*
-
-
-user.save(function(err, user, affected){
-	console.log("arguments" + arguments);
-	console.log("ere" + err);
-	User.findOne({name : "kokoko"}, function(err, trt){
-		console.log("kokoko" + trt);
-	})
-});
-console.log("arguments" + arguments);
-*/
