@@ -1,12 +1,16 @@
+//state routes
 
-/*
- * GET home page.
- */
+module.exports = function(app){
+	app.get("/", require('./frontpage.js').get);
 
-exports.index = function(req, res){
-	res.render('index', { title: req.connection.remoteAddress });
+	app.get("/user", require('./user.js').get);
+
+	app.get("/login", require('./login.js').get);
+
+	app.post("/login", require('./login.js').post);
+
+	app.post("/logout", require('./logout.js').post);
+
+	app.get("/chat", require('./chat.js').get);
 };
 
-exports.index = function(req, res){
-	res.render('index', { title: req.connection.remoteAddress });
-};
